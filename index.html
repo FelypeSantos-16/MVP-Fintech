@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Inteligência em Investimentos</title>
+    <style>
+        /* Estilos Globais */
+        :root {
+            --bg-color: #0b0f19;
+            --primary: #00e5ff;
+            --secondary: #1a233a;
+            --text-light: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navegação */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: rgba(11, 15, 25, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at center, var(--secondary) 0%, var(--bg-color) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: var(--bg-color);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 229, 255, 0.3);
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            padding: 6rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--secondary);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 229, 255, 0.3);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Lu<span>mina</span></a>
+        <nav>
+            <a href="#proposito">Nosso Propósito</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#seguranca">Segurança</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>O seu futuro financeiro, <span>iluminado por dados.</span></h1>
+        <p>A primeira FinTech de aconselhamento autônomo do Brasil. Imparcial, hiper-personalizada e guiada por Inteligência Artificial.</p>
+        <button class="cta-button" onclick="simularAnalise()">Simular Minha Carteira</button>
+    </section>
+
+    <section id="proposito">
+        <h2 class="section-title">Nossa Identidade</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>A Missão</h3>
+                <p>Democratizar o acesso a investimentos inteligentes e de alta rentabilidade por meio de inteligência artificial, oferecendo análises personalizadas para todos os perfis.</p>
+            </div>
+            <div class="card">
+                <h3>A Visão</h3>
+                <p>Ser o principal ecossistema de aconselhamento financeiro autônomo do país, transformando dados complexos de mercado em decisões simples e lucrativas.</p>
+            </div>
+            <div class="card">
+                <h3>Nossos Valores</h3>
+                <p>Transparência total, Inovação constante, Segurança de Dados inegociável, Empatia Financeira e Eficiência Operacional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" style="background-color: var(--secondary);">
+        <h2 class="section-title">O Motor Tecnológico (TGS)</h2>
+        <div class="grid">
+            <div class="card" style="background-color: var(--bg-color);">
+                <h3>1. Inputs (Coleta)</h3>
+                <p>Nosso Sistema de Informação analisa seu perfil de risco, renda e objetivos de vida através da integração Open Finance.</p>
+            </div>
+            <div class="card" style="background-color: var(--bg-color);">
+                <h3>2. Processamento (IA & Big Data)</h3>
+                <p>Cruzamos seus dados com bilhões de informações do mercado global em tempo real, eliminando conflitos de interesse e emoções.</p>
+            </div>
+            <div class="card" style="background-color: var(--bg-color);">
+                <h3>3. Outputs (Resultados)</h3>
+                <p>Você recebe recomendações precisas e automáticas de rebalanceamento de carteira, focadas apenas no seu lucro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="seguranca">
+        <h2 class="section-title">Segurança Inegociável</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Criptografia Militar</h3>
+                <p>Seus dados são protegidos com padrão AES-256 de ponta a ponta, garantindo que suas informações financeiras estejam sempre blindadas.</p>
+            </div>
+            <div class="card">
+                <h3>Conformidade LGPD</h3>
+                <p>O controle é 100% seu. Você decide quais dados a Lumina pode analisar e pode revogar o acesso à nossa Inteligência Artificial a qualquer momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Lumina FinTech. Projeto Acadêmico - Gestão Corporativa com TI.</p>
+    </footer>
+
+    <script>
+        // Função simples para demonstrar interatividade no MVP
+        function simularAnalise() {
+            const btn = document.querySelector('.cta-button');
+            const textoOriginal = btn.innerText;
+            
+            btn.innerText = "Conectando ao Open Finance...";
+            btn.style.opacity = "0.7";
+            
+            setTimeout(() => {
+                btn.innerText = "Analisando Big Data...";
+                
+                setTimeout(() => {
+                    alert("MVP Interativo: Em um cenário real, o usuário seria redirecionado para o questionário de onboarding e integração de APIs bancárias da Lumina.");
+                    btn.innerText = textoOriginal;
+                    btn.style.opacity = "1";
+                }, 1500);
+            }, 1500);
+        }
+
+        // Rolagem suave para os links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
